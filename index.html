@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="postApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+
+  <script>
+
+    angular.module('postApp' , [])
+                                  .controller('myCtrl', function ($scope){
+                                    $scope.object = {
+                                      title: "hi!",
+                                      content: "there"
+                                    }
+                                  });
+
+
+  </script>
+</head>
+<body>
+  <div ng-controller="myCtrl">
+    <ul ng-repeat="(key, val) in object">
+      <li>{{val}} <br> {{val}}</li>
+    </ul>
+  </div>
+
+</body>
+</html>
